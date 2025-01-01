@@ -1,0 +1,188 @@
+// -*- mode: jsonc -*-
+[{
+  "layer": "top",
+  "position": "left",
+  "width": 39,
+  "margin-top": 8,
+  "margin-bottom": 8,
+  "exclusive": true,
+  "passthrough": false,
+  "reload_on_style_change": true,
+  "margin-left": 6,
+
+  "modules-left": [
+    "clock",
+    "network",
+    "bluetooth",
+    "pulseaudio",
+    "battery",
+    "cpu",
+    "memory"
+  ],
+
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+ 
+  "modules-right": [
+    "hyprland/window", 
+    "custom/power"
+  ],
+  
+  "hyprland/window": {
+    "format": "<span>   {}</span>",
+    "rotate": 90
+  },
+
+  "hyprland/workspaces": {
+        "format": "<span font='12px'>{icon}</span>",
+        "format-icons": {
+            "active": "<small>󱨇</small>",
+            "default": "<small></small>"
+        },
+        "disable-scroll": true,
+        "rotate": 0,
+        "all-outputs": true,
+        "active-only": false,
+        "on-click": "activate",
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+
+    "custom/power": {
+      "format": "",
+      "interval": "once",
+      "tooltip": false,
+      "on-click": "wlogout"
+    },
+
+    "network": {
+      "tooltip": false,
+      "format-wifi": "<span> </span>",
+      "rotate": 0,
+      "format-ethernet": "󰈀",
+      "format-linked": "󰈀 {ifname}(No IP)", 
+      "format-disconnected": "<span>󰤭</span>",
+      "interval": 2,
+      "on-click": "kitty sudo nmtui" 
+     },
+
+     "bluetooth": {
+       "format-on": "",
+       "format-off": "󰂲",
+       "format-disabled": "",
+       "format-connected": "<span color='#458588'><b></b></span>",
+       "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+       "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+       "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+       "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+       "on-click": "kitty bluetui"
+     },
+        "bluetooth#status": {
+          "format-on": "",
+          "format-off": "",
+          "format-disabled": "",
+          "format-connected": "<b>{num_connections}</b>",
+          "format-connected-battery": "<small><b>{device_battery_percentage}%</b></small>",
+          "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+          "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+          "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+          "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+          "on-click": "kitty bluetui"
+        },
+
+     "battery": {
+       "rotate": 270,
+       "states": {
+         "warning": 30,
+         "critical": 15
+       },
+       "format": "<span color='#689d6a'>{icon}</span>",
+       "format-warning": "<span color='#d79921'>{icon}</span>",
+       "format-critical": "<span color='#cc241d'>{icon}</span>",
+       "format-charging": "<span color='#689d6a'>󰂄</span>",
+       "format-plugged": "<span color='#689d6a'></span>",
+       "format-full": "<span color='#82A55F'><b>{icon}</b></span>",
+       "interval": 2,
+       "format-icons" : [
+        "󰁻",
+        "󰁼",
+        "󰁾",
+        "󰂀",
+        "󰂂",
+        "󰁹"
+       ],
+       "tooltip-format": "{timeTo} {capacity}% | {power} W"
+     },
+
+     "pulseaudio": {
+         "format": "{icon}",
+         "format-bluetooth": "{icon}",
+         "tooltip-format": "{volume}% {icon} | {desc}",
+         "format-muted": "󰖁",
+         "format-icons": {
+           "headphones": "󰋌",
+           "handsfree": "󰋌",
+           "headset": "󰋌",
+           "phone": "",
+           "portable": "",
+           "car": " ",
+           "default": [
+             "󰕿",
+             "󰖀",
+             "󰕾"
+           ]
+         },
+     "on-click": "pavucontrol"
+     },
+ 
+    "clock": {
+       "format":"{:%H\n%M}" ,
+       "rotate": 0,
+       "format-alt": "{:%I:%M %p / %d %B}",
+       "tooltip-format": "<span font='CaskaydiaMono Nerd Font'>{calendar}</span>",
+       "calendar": {
+         "format": {
+           "today": "<span color='#689d6a'><u>{}</u></span>",
+           "weekdays": "<span color='#fe8019'>{}</span>"
+         }
+       }
+  },
+
+   "cpu": {
+     "interval": 10,
+     "format": " ",
+     "max-length": 3,
+     "tooltip-format": "{usage}%"
+   },
+
+   "memory":{
+     "interval": 30,
+     "format": " ",
+     "max-length": 3,
+     "tooltip-format": "{used:0.1f}G/{total:0.1f}G"
+   },
+   
+
+    // modules for padding //
+
+    "custom/l_end": {
+        "format": " ",
+        "interval": "once",
+        "tooltip": false
+    },
+
+    "custom/r_end": {
+        "format": " ",
+        "interval": "once",
+        "tooltip": false
+    },
+
+    "custom/padd": {
+        "format": " ",
+        "interval": "once",
+        "tooltip": false
+    }
+ }
+]
