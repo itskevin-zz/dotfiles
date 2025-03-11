@@ -67,7 +67,7 @@ return {
 					},
 				},
 				window = {
-					width = 30,
+					width = 20,
 				},
 			})
 			vim.keymap.set("n", "<C-n>", ":Neotre filesystem reveal left<CR>", {})
@@ -197,4 +197,18 @@ return {
 			})
 		end,
 	},
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    opts = {},
+    keys = {
+      {
+        "<leader>?",
+        function()
+          require("which-key").show({ global = false })
+        end,
+        desc = "Buffer Local Keymaps (which-ley)",
+      }
+    },
+  },
 }
