@@ -67,7 +67,7 @@ return {
 					},
 				},
 				window = {
-					width = 20,
+					width = 25,
 				},
 			})
 			vim.keymap.set("n", "<C-n>", ":Neotre filesystem reveal left<CR>", {})
