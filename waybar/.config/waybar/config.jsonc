@@ -2,13 +2,13 @@
 [{
   "layer": "top",
   "position": "left",
-  "width": 39,
-  "margin-top": 8,
-  "margin-bottom": 8,
+  "width": 32,
+  "margin-top": 0,
+  "margin-bottom": 0,
   "exclusive": true,
   "passthrough": false,
   "reload_on_style_change": true,
-  "margin-left": 6,
+  "margin-left": 0,
 
   "modules-left": [
     "clock",
@@ -134,7 +134,7 @@
              "󰕾"
            ]
          },
-     "on-click": "pavucontrol"
+     "on-click": "kitty wiremix"
      },
  
     "clock": {

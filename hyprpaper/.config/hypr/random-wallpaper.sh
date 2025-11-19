@@ -13,7 +13,7 @@ sleep 1
 
 # preload selected file & set preloaded image
 hyprctl hyprpaper preload "$background"
-hyprctl hyprpaper wallpaper " , $background"
+hyprctl hyprpaper wallpaper "all,$background"
 
 # pause briefly
 sleep 1
