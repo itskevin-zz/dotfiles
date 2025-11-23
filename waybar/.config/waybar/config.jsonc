@@ -65,7 +65,7 @@
       "format-linked": "󰈀 {ifname}(No IP)", 
       "format-disconnected": "<span>󰤭</span>",
       "interval": 2,
-      "on-click": "kitty sudo nmtui" 
+      "on-click": "kitty gazelle" 
      },
 
      "bluetooth": {
