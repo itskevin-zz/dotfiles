@@ -1,0 +1,73 @@
+* {
+  font-family: "Google Sans";
+  color: #e5e9f0;
+  background: transparent;
+  transition: 20ms;
+  font-size: 15px;
+}
+
+window {
+    /*background-color: rgba(53, 53, 53, 0.5);*/
+    background-color: transparent;
+}
+
+button {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+    
+    border-style: solid;
+    border-radius: 10px;
+    border: 2px solid transparent;
+
+    background-color: rgba(12, 12, 12, 1);
+    margin: 5px;
+    transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+    min-width: 100px;
+    min-height: 50px; 
+}
+
+button:focus,
+button:active,
+button:hover {
+    color: #FFFFFF;
+    background-color: rgba(12, 12, 12, 1);
+    outline-style: none;
+    border: 2px solid rgba(205, 214, 244, 1);
+}
+
+#lock {
+    margin: 10px;
+    border-radius: 0px;
+    /*background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));*/
+    background-image: image(url("/home/kevin/.config/wlogout/icons/lock.png"));
+}
+
+#logout {
+    margin: 10px;
+    border-radius: 0px;
+    /*background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));*/
+    background-image: image(url("/home/kevin/.config/wlogout/icons/logout.png"));
+}
+
+#suspend {
+    margin: 10px;
+    border-radius: 0px;
+    /*background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));*/
+    background-image: image(url("/home/kevin/.config/wlogout/icons/suspend.png"));
+}
+
+#reboot {
+    margin: 10px;
+    border-radius: 0px;
+    /*background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));*/
+    background-image: image(url("/home/kevin/.config/wlogout/icons/reboot.png"));
+}
+
+#shutdown {
+    margin: 10px;
+    border-radius: 0px;
+    /*background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));*/
+    background-image: image(url("/home/kevin/.config/wlogout/icons/shutdown.png"));
+}

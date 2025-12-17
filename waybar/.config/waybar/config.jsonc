@@ -54,7 +54,7 @@
       "format": "",
       "interval": "once",
       "tooltip": false,
-      "on-click": "wlogout"
+      "on-click": "wlogout --protocol layer-shell --layout ~/.config/wlogout/layout --css ~/.config/wlogout/style.css --buttons-per-row 2"
     },
 
     "network": {
