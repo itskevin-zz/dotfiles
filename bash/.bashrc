@@ -116,3 +116,6 @@ function y() {
   rm -f -- "$tmp"
 }
 export PATH="$HOME/.local/bin:$PATH"
+
+# opencode
+export PATH=/home/kevin/.opencode/bin:$PATH
