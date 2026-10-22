@@ -12,3 +12,4 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 
 vim.opt.wrap = true
 vim.opt.linebreak = true -- wraps at word boundaries, not mid-word
+vim.opt.scrolloff = 999 -- keep cursor vertically centred
